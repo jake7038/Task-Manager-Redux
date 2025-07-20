@@ -23,3 +23,9 @@ export const Opcoes = styled.div`
         }
 
 `
+
+export const Opcao = styled.div`
+    display: inline;
+    text-transform: capitalize;
+
+`
