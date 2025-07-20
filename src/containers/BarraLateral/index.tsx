@@ -4,6 +4,7 @@ import * as S from './styles'
 import { RootReducer } from "../../store"
 import { alterarTermo } from "../../store/redurcers/filtro"
 import * as enums from '../../utils/enums/Tarefa'
+import { Campo } from "../../styles"
 
 const BarraLateral = () => {
     const dispatch = useDispatch()
@@ -11,7 +12,7 @@ const BarraLateral = () => {
     
     return (<S.Aside>
         <div>
-            <S.Campo type="text" placeholder="Buscar" value={ termo } onChange={evento => dispatch(alterarTermo(evento.target.value))} />
+            <Campo type="text" placeholder="Buscar" value={ termo } onChange={evento => dispatch(alterarTermo(evento.target.value))} />
             <S.Filtros>
                 <FiltroCard valor={enums.Status.PENDENTE} criterio="status"  legenda="Pendentes"/>
                 <FiltroCard valor={enums.Status.CONCLUIDA} criterio="status"  legenda="Concluídas"/>
